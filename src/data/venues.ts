@@ -6,7 +6,7 @@
 
 // 如果你暫時還沒有本地圖片，想繼續用網路圖片，可以不用上面的 import，直接在 img 屬性放網址字串即可。
 
-export const venues = [
+export const venuesData = [
   {
     id: 1,
     name: "臺北市明倫社宅 - 青創大廳",

@@ -1,13 +1,11 @@
-import { useState, useEffect } from "react";
-// 1. 引入 Lucide 圖示套件
+import { useState } from "react";
 import { Users, Zap, Info, X, ArrowRight } from "lucide-react";
 import "./App.css";
-import { venues } from "./data/venues.js";
+import { venuesData } from "./data/venues";
 
-// --- Modal 元件 (配合 Lucide 圖示調整) ---
-const Modal = ({ venue, onClose }) => {
+const Modal = ({ venue, onClose }: { venue: any; onClose: any }) => {
   if (!venue) return null;
-  const handleBackdropClick = (e) => {
+  const handleBackdropClick = (e: any) => {
     if (e.target === e.currentTarget) onClose();
   };
 
@@ -58,9 +56,9 @@ const Modal = ({ venue, onClose }) => {
             <button
               className="btn-book"
               style={{ backgroundColor: venue.color }}
-              onClick={() => alert("開啟照片連結！")}
+              onClick={() => alert("連結到雲端")}
             >
-              更多照片
+              查看更多照片
             </button>
           </div>
           <div>
@@ -76,7 +74,7 @@ const Modal = ({ venue, onClose }) => {
             <p style={{ lineHeight: 1.6, color: "#555" }}>{venue.desc}</p>
             <h4>設備清單</h4>
             <ul className="eq-list">
-              {venue.equipment.map((item, i) => (
+              {venue.equipment.map((item: any, i: number) => (
                 <li key={i}>{item}</li>
               ))}
             </ul>
@@ -87,9 +85,8 @@ const Modal = ({ venue, onClose }) => {
   );
 };
 
-// --- App 元件 (依據你的要求修改) ---
 const App = () => {
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState<any>(null);
 
   return (
     <div className="container">
@@ -98,17 +95,8 @@ const App = () => {
         <p>Public Space Introduction Handbook</p>
       </header>
 
-      {/* 
-      <div className="menu">
-        <button>全部</button>
-        <button>A 棟</button>
-        <button>B1 棟</button>
-        <button>B2 棟</button>
-      </div>
-      */}
-
       <div className="grid">
-        {venues.map((v) => (
+        {venuesData.map((v: any) => (
           <div key={v.id} className="card" onClick={() => setSelected(v)}>
             <div
               className="card-img"
@@ -118,38 +106,32 @@ const App = () => {
                 {v.name.split(" - ")[1]}
               </span>
             </div>
-
             <div className="card-content">
               <div className="meta-info">
-                {/* 替換點 1: 使用 Lucide 的 Users */}
                 <span className="meta-item">
                   <Users size={16} /> {v.capacity}
                 </span>
-                {/* 替換點 2: 使用 Lucide 的 Zap */}
                 <span className="meta-item">
                   <Zap size={16} /> 插座充足
                 </span>
               </div>
-
               <h3 style={{ marginTop: 0, marginBottom: "8px" }}>
                 {v.name.split(" - ")[0]}
               </h3>
               <p style={{ margin: 0, color: "#888", fontSize: "0.9rem" }}>
                 {v.name.split(" - ")[1]}
               </p>
-
               <div
                 style={{
                   marginTop: "15px",
                   color: v.color,
                   fontWeight: "bold",
                   fontSize: "0.9rem",
-                  display: "flex", // 為了讓箭頭對齊，加了 flex
+                  display: "flex",
                   alignItems: "center",
                   gap: "4px",
                 }}
               >
-                {/* 替換點 3: 使用 ArrowRight 替代 &rarr; 看起來更精緻 */}
                 查看詳情 <ArrowRight size={16} />
               </div>
             </div>
