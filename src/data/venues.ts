@@ -1,11 +1,3 @@
-// 1. 引入圖片 (這樣 Vite 才會把圖片打包進去)
-// 注意路徑：.. 代表上一層
-// import imgMinglun from "../assets/images/minglun.jpg";
-// import imgHealth from "../assets/images/health.jpg";
-// import imgYuanhe from "../assets/images/yuanhe.jpg";
-
-// 如果你暫時還沒有本地圖片，想繼續用網路圖片，可以不用上面的 import，直接在 img 屬性放網址字串即可。
-
 export const venuesData = [
   {
     id: 1,
@@ -18,7 +10,6 @@ export const venuesData = [
     equipment: ["無線麥克風 x2", "150吋投影幕", "4K投影機", "活動式白板"],
     rules: "可輕食飲料，禁明火",
     desc: "位於一樓的開放式大廳，擁有絕佳的採光與幾何美學設計。這裡是明倫社宅「青創」精神的核心，適合舉辦社區大會、文創市集或學術講座。",
-    interact: "桌椅配置模擬器 (點擊切換佈局)",
     img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80",
     photos: [
       "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80",
@@ -36,7 +27,6 @@ export const venuesData = [
     equipment: ["IH 感應爐", "旋風大烤箱", "雙門大冰箱", "基本鍋具組"],
     rules: "可開火(限電磁爐)，需清潔",
     desc: "保留了舊眷村的溫暖人情味，這個共餐廚房是青銀共居的橋樑。配備完整的中島與廚電，非常適合鄰居一起鑽研料理、舉辦節日派對。",
-    interact: "360度櫥櫃導覽 (滑鼠懸停查看餐具)",
     img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
     photos: [
       "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80",
@@ -54,7 +44,6 @@ export const venuesData = [
     equipment: ["55吋壁掛電視", "隔音玻璃", "智慧門鎖 (App解鎖)"],
     rules: "僅限瓶裝水，禁止飲食",
     desc: "漂浮在空中的智慧方舟。透過空中廊道連接，這個藍色休憩室專為專注工作設計，擁有絕佳的隔音與高速網路，是遠端工作者的首選。",
-    interact: "即時噪音監測 (目前分貝: 35dB)",
     img: "https://images.unsplash.com/photo-1556910103-1c02745a30bf?auto=format&fit=crop&w=800&q=80",
     photos: [
       "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80",
@@ -72,7 +61,6 @@ export const venuesData = [
     equipment: ["無線麥克風 x2", "150吋投影幕", "4K投影機", "活動式白板"],
     rules: "可輕食飲料，禁明火",
     desc: "位於一樓的開放式大廳，擁有絕佳的採光與幾何美學設計。這裡是明倫社宅「青創」精神的核心，適合舉辦社區大會、文創市集或學術講座。",
-    interact: "桌椅配置模擬器 (點擊切換佈局)",
     img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80",
     photos: [
       "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80",
@@ -90,11 +78,86 @@ export const venuesData = [
     equipment: ["無線麥克風 x2", "150吋投影幕", "4K投影機", "活動式白板"],
     rules: "可輕食飲料，禁明火",
     desc: "位於一樓的開放式大廳，擁有絕佳的採光與幾何美學設計。這裡是明倫社宅「青創」精神的核心，適合舉辦社區大會、文創市集或學術講座。",
-    interact: "桌椅配置模擬器 (點擊切換佈局)",
     img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80",
     photos: [
       "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80",
     ],
+  },
+  {
+    id: 6,
+    building: "A棟",
+    name: "範例XXX會議室 - 會議室",
+    engName: "Sample Conference Room",
+    color: "#6C9BCF",
+    capacity: "15 - 20 人",
+    outlets: "插座充足",
+    equipment: ["喇叭", "麥克風", "桌子 4 張", "摺疊椅 10 張"],
+    rules:
+      "1. 使用喇叭、麥克風請保持適當音量，以不影響其他空間使用者為原則。\n2. 請自行清潔環境，愛惜空間內所有設備。",
+    desc: "適合手作課程、交流會與讀書會的小型空間，設備完善，能快速佈置成不同形式的活動場景。",
+    img: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80",
+    photos: [],
+  },
+
+  {
+    id: 7,
+    building: "A棟",
+    name: "A201 多功能教室 - 教室",
+    engName: "A201 Multi-purpose Room",
+    color: "#5C7AEA",
+    capacity: "30.4 坪",
+    outlets: "插座充足",
+    equipment: ["(尚未提供，使用假資料：投影幕)"],
+    rules:
+      "1. 使用喇叭、麥克風請保持適當音量。\n2. 請自行清潔環境，愛惜空間設備。",
+    desc: "寬敞的中大型空間，適合講座、團體課程與教育訓練，場地配置彈性高。",
+    img: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80",
+    photos: [],
+  },
+
+  {
+    id: 8,
+    building: "A棟",
+    name: "A204 多功能教室 - 教室",
+    engName: "A204 Workshop Room",
+    color: "#FF9F1C",
+    capacity: "11.4 坪",
+    outlets: "插座一般",
+    equipment: ["(尚未提供，使用假資料：白板)"],
+    rules: "1. 使用器材請注意音量。\n2. 使用後請維持環境整潔。",
+    desc: "適合中小型課程、手作工作坊與小組聚會。安靜舒適的學習環境。",
+    img: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80",
+    photos: [],
+  },
+
+  {
+    id: 9,
+    building: "A棟",
+    name: "A205 多功能教室 - 教室",
+    engName: "A205 Studio Room",
+    color: "#F28482",
+    capacity: "67.2 坪",
+    outlets: "插座一般",
+    equipment: ["(尚未提供，使用假資料：移動式電腦桌)"],
+    rules: "1. 使用器材請注意音量。\n2. 使用後請維持環境整潔。",
+    desc: "超大型場域，適合劇場排練、舞蹈課程、肢體活動與大型團隊工作坊。",
+    img: "https://images.unsplash.com/photo-1556910103-1c02745a30bf?auto=format&fit=crop&w=800&q=80",
+    photos: [],
+  },
+
+  {
+    id: 10,
+    building: "A棟",
+    name: "屋頂農園 - 戶外",
+    engName: "Rooftop Garden",
+    color: "#80B918",
+    capacity: "戶外空間",
+    outlets: "戶外插座有限",
+    equipment: ["(尚未提供，使用假資料：戶外遮陽棚)"],
+    rules: "1. 注意戶外安全。\n2. 請勿任意採摘植栽。\n3. 使用後請保持整潔。",
+    desc: "擁有自然植栽的舒適戶外空間，適合園藝課程、小型聚會與自然體驗活動。",
+    img: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80",
+    photos: [],
   },
 ];
