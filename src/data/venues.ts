@@ -9,6 +9,7 @@
 export const venuesData = [
   {
     id: 1,
+    building: "B2棟",
     name: "臺北市明倫社宅 - 青創大廳",
     engName: "The Creative Hall",
     color: "#E63946",
@@ -19,9 +20,14 @@ export const venuesData = [
     desc: "位於一樓的開放式大廳，擁有絕佳的採光與幾何美學設計。這裡是明倫社宅「青創」精神的核心，適合舉辦社區大會、文創市集或學術講座。",
     interact: "桌椅配置模擬器 (點擊切換佈局)",
     img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80",
+    photos: [
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80",
+    ],
   },
   {
     id: 2,
+    building: "B1棟",
     name: "臺北市健康社宅 - 共餐廚房",
     engName: "Community Kitchen",
     color: "#2A9D8F",
@@ -32,9 +38,14 @@ export const venuesData = [
     desc: "保留了舊眷村的溫暖人情味，這個共餐廚房是青銀共居的橋樑。配備完整的中島與廚電，非常適合鄰居一起鑽研料理、舉辦節日派對。",
     interact: "360度櫥櫃導覽 (滑鼠懸停查看餐具)",
     img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+    photos: [
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80",
+    ],
   },
   {
     id: 3,
+    building: "A棟",
     name: "土城員和社宅 - 藍色休憩室",
     engName: "Focus Room",
     color: "#457B9D",
@@ -45,5 +56,45 @@ export const venuesData = [
     desc: "漂浮在空中的智慧方舟。透過空中廊道連接，這個藍色休憩室專為專注工作設計，擁有絕佳的隔音與高速網路，是遠端工作者的首選。",
     interact: "即時噪音監測 (目前分貝: 35dB)",
     img: "https://images.unsplash.com/photo-1556910103-1c02745a30bf?auto=format&fit=crop&w=800&q=80",
+    photos: [
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80",
+    ],
+  },
+  {
+    id: 4,
+    building: "A棟",
+    name: "臺北市明倫社宅 - 青創大廳",
+    engName: "The Creative Hall",
+    color: "#E63946",
+    capacity: "40 - 60 人",
+    outlets: "插座充足",
+    equipment: ["無線麥克風 x2", "150吋投影幕", "4K投影機", "活動式白板"],
+    rules: "可輕食飲料，禁明火",
+    desc: "位於一樓的開放式大廳，擁有絕佳的採光與幾何美學設計。這裡是明倫社宅「青創」精神的核心，適合舉辦社區大會、文創市集或學術講座。",
+    interact: "桌椅配置模擬器 (點擊切換佈局)",
+    img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80",
+    photos: [
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80",
+    ],
+  },
+  {
+    id: 5,
+    building: "B2棟",
+    name: "臺北市明倫社宅 - 青創大廳",
+    engName: "The Creative Hall",
+    color: "#E63946",
+    capacity: "40 - 60 人",
+    outlets: "插座充足",
+    equipment: ["無線麥克風 x2", "150吋投影幕", "4K投影機", "活動式白板"],
+    rules: "可輕食飲料，禁明火",
+    desc: "位於一樓的開放式大廳，擁有絕佳的採光與幾何美學設計。這裡是明倫社宅「青創」精神的核心，適合舉辦社區大會、文創市集或學術講座。",
+    interact: "桌椅配置模擬器 (點擊切換佈局)",
+    img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80",
+    photos: [
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80",
+    ],
   },
 ];

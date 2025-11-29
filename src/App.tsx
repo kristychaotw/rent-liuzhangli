@@ -2,7 +2,10 @@ import { useState } from "react";
 import { Users, Zap, Info, X, ArrowRight } from "lucide-react";
 import "./App.css";
 import { venuesData } from "./data/venues";
+import VenueGallery from "./components/VenueGallery";
+import BuildingFilter from "./components/BuildingFilter";
 
+const BUILDINGS = ["全部", "A棟", "B1棟", "B2棟"];
 const Modal = ({ venue, onClose }: { venue: any; onClose: any }) => {
   if (!venue) return null;
   const handleBackdropClick = (e: any) => {
@@ -78,6 +81,7 @@ const Modal = ({ venue, onClose }: { venue: any; onClose: any }) => {
                 <li key={i}>{item}</li>
               ))}
             </ul>
+            <VenueGallery images={venue.photos || [venue.img]} />
           </div>
         </div>
       </div>
@@ -87,16 +91,24 @@ const Modal = ({ venue, onClose }: { venue: any; onClose: any }) => {
 
 const App = () => {
   const [selected, setSelected] = useState<any>(null);
-
+  const [filter, setFilter] = useState("全部");
+  const filteredVenues =
+    filter === "全部"
+      ? venuesData
+      : venuesData.filter((v) => v.building === filter);
   return (
     <div className="container">
       <header>
         <h1>六張犁社會住宅・公共場地介紹手冊</h1>
         <p>Public Space Introduction Handbook</p>
       </header>
-
+      <BuildingFilter
+        categories={BUILDINGS}
+        activeCategory={filter}
+        onSelect={setFilter}
+      />
       <div className="grid">
-        {venuesData.map((v: any) => (
+        {filteredVenues.map((v: any) => (
           <div key={v.id} className="card" onClick={() => setSelected(v)}>
             <div
               className="card-img"
